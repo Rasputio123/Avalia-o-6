@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delícias Caseiras</title>
+
+  <!-- W3.CSS e Google Fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+  <style>
+    /* Fonte padrão */
+    body, h1, h2, h3, h4, h5, h6 {
+      font-family: "Karma", sans-serif;
+    }
+
+    /* Fundo com degradê vermelho → amarelo */
+    body {
+      background: linear-gradient(to bottom right, #ff4b2b, #ffcc00);
+      color: #222;
+      margin: 0;
+    }
+
+    /* Menu superior */
+    .w3-top {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Itens do menu lateral */
+    .w3-bar-block .w3-bar-item {
+      padding: 20px;
+    }
+
+    /* Cartões de comida - um pouco mais transparentes */
+    .card-comida {
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    /* Caixa para descrição da comida - ainda mais transparente */
+    .descricao-comida {
+      background-color: rgba(255, 255, 255, 0.45); /* fundo levemente translúcido */
+      border-radius: 12px;
+      padding: 8px 12px;
+      margin-top: 6px;
+      font-size: 0.95rem;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 10px;
+      margin-top: 20px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Menu lateral -->
+  <nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+       style="display:none;z-index:2;width:40%;min-width:300px"
+       id="menuLateral">
+    <a href="javascript:void(0)" onclick="fecharMenu()" class="w3-bar-item w3-button">Fechar Menu</a>
+    <a href="#comidas" onclick="fecharMenu()" class="w3-bar-item w3-button">Comidas</a>
+    <a href="#sobre" onclick="fecharMenu()" class="w3-bar-item w3-button">Sobre</a>
+  </nav>
+
+  <!-- Menu superior -->
+  <div class="w3-top">
+    <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-button w3-padding-16 w3-left" onclick="abrirMenu()">☰</div>
+      <!-- Contato removido -->
+      <div class="w3-center w3-padding-16">Delícias Caseiras</div>
+    </div>
+  </div>
+  
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+    <!-- PRIMEIRA GRADE DE COMIDAS -->
+    <section class="w3-row-padding w3-padding-16 w3-center" id="comidas">
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/Imagem do WhatsApp de 2025-10-29 à(s) 18.28.28_a6aacb63.jpg" alt="Enroladão de Carne" style="width:100%">
+        <h3>Enroladão de Carne</h3>
+        <p class="descricao-comida">Pão enrolado com Carne moida, milho, ervilha e cenoura, o suficiente para a família toda.</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/pão recheado.jpg" alt="Pão recheado de Calabresa" style="width:100%">
+        <h3>Pão Recheado</h3>
+        <p class="descricao-comida">Pão recheado com Calabresa ralada, queijo mussarela, tomate, cebola e orégano</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/enrolado de salchicha.jpg" alt="Enrolado de Salchicha" style="width:100%">
+        <h3>Enroladinho de Salchicha</h3>
+        <p class="descricao-comida">Enroladinhos de salchicha assados no forno, feitos com massa de pão e salchichas cortadas</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/Cookie.jpg" alt="Cookiee" style="width:100%">
+        <h3>Cookiee</h3>
+        <p class="descricao-comida">Cookies feitos com Farinha de trigo, maizena, ovo, açúcar, manteiga e granulado de chocolate.</p>
+      </div>
+    </section>
+    
+    <!-- SEGUNDA GRADE DE COMIDAS -->
+    <section class="w3-row-padding w3-padding-16 w3-center">
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/pé de moleque.jpg" alt="Pé de moleque" style="width:100%">
+        <h3>Pé de Moleque</h3>
+        <p class="descricao-comida">Pé de Moleque feito com amendoins, açúcar, leite condensado e achocolatado.</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/pão.jpg" alt="Pão" style="width:100%">
+        <h3>Pão Caseiro</h3>
+        <p class="descricao-comida">Pão Caseiro feito com Farinha de trigo, fermento biológico, sal, açúcar, oléo, e agua morna até o ponto da massa.</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/kibe.jpg" alt="Kibe" style="width:100%">
+        <h3>Kibe Caseiro</h3>
+        <p class="descricao-comida">Kibe Caseiro feito com Carne moída, trigo de kibe, sal, pimenta do reíno, cebola tempero verde e hortelã.</p>
+      </div>
+      <div class="w3-quarter card-comida">
+        <img src="Imagens/Brownie.jpg" alt="Brownie" style="width:100%">
+        <h3>Brownie</h3>
+        <p class="descricao-comida">Brownie feito com massa de bolo de chocolate, manteiga, leite condensado, uma chocolate meio amargo e ovos.</p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SOBRE -->
+    <section id="sobre" class="w3-container w3-padding-32 w3-center">  
+      <h3>Sobre Nós</h3>
+      <img src="Imagens/eu e a vó.jpg" alt="Eu e minha Vó" style="width:70%;border-radius:10px;">
+      <div class="w3-padding-32">
+        <h4><b>Receitas Caseiras feitas com muito Amor</b></h4>
+        <h6><i>Feita com carinho, servida com alegria.</i></h6>
+        <p>Este é um espaço dedicado a quem ama uma boa comida!</p>
+      </div>
+    </section>
+
+    <!-- RODAPÉ SIMPLIFICADO COM WHATSAPP -->
+    <footer>
+      <div>
+        <h3>Rodapé</h3>
+        <p>Receitas feitas em casa, com a ajuda de minha vó Iracy, que me ensinou desde pequeno sobre suas receitas caseiras deliciosas.</p>
+        <p>Para as Receitas completas com passo a passo, contatar nos.</p>
+      </div>
+      <div>
+        <h4>WhatsApp</h4>
+        <p>+55 (45) 98801-7044</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- SCRIPT PARA ABRIR E FECHAR MENU -->
+  <script>
+    function abrirMenu() {
+      document.getElementById("menuLateral").style.display = "block";
+    }
+
+    function fecharMenu() {
+      document.getElementById("menuLateral").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
